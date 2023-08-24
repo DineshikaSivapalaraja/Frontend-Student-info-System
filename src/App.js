@@ -9,7 +9,6 @@ function App() {
         {/* Hey This is Dineshika! */}
         <AppBar/>
         <Student/>
-       
     </div>
   );
 }
