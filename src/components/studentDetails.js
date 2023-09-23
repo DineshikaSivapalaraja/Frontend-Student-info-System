@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';   
 import './student1.css';
 import { navigateToAddStudent } from './navigation';
+import DeleteStudent from './deleteStudent';
 
 export default function StudentDetails() {
     const [name, setName] = useState('');
@@ -31,6 +32,7 @@ export default function StudentDetails() {
         <div className="container">
             <h1 className="title">Students</h1>
             <button id="nav-Btn" onClick={() => navigateToAddStudent()}>Add Student</button> 
+            {/* <button id="deleteButton">Delete Student</button> */}
             <div className="student-container">
                 {students.map(Student => (
                     <div className="student" key={Student.id}>
@@ -39,9 +41,14 @@ export default function StudentDetails() {
                         <p>Student ID: {Student.stu_id}</p>
                         <p>Degree: {Student.degree}</p>
                         <p>Year: {Student.year}</p>
+
+                        {/* delete button added for each student container */}
+                        {/* <button id="deleteButton">Delete Student</button> */}
+                        <DeleteStudent studentId={Student.id}/>
                     </div>
                 ))}
             </div>
         </div>
     );
 }
+

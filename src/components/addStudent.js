@@ -33,7 +33,6 @@ export default function AddStudent() {
 
     return (
         <div className="container">
-            {/* <button id="nav-btn" onClick={() => navigateToStudentDetails()}>Go to Student Details</button>  */}
             <div className="paper">
                 <h1 className="title">Add Student</h1>
                 <form className="form" >    
@@ -68,11 +67,13 @@ export default function AddStudent() {
                     <button className="button" type="submit" onClick={handleClick}>Submit</button>
 
       {/* Add student form here */}
-      {/* <button onClick={() => navigateToStudentDetails()}>Go to Student Details</button> */}
+      {/* <button onClick={() => navigateToStudentDetails()}>Student Details</button> */}
                 </form>
             </div> 
             <button id="nav-Btn" onClick={() => navigateToStudentDetails()}>Student Details</button> 
+            {/* <DeleteStudent/> */}
         </div>
+        
     );
 
 }

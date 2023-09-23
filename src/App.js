@@ -1,45 +1,3 @@
-
-// import './App.css';
-//                 // import React from 'react';-->new
-// import React from 'react';
-
-//         // import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-// import AppBar from './components/AppBar';
-//               // import Student from './components/Student';
-//               // import Student from './components/student1';
-//               // import Students from './components/student2';
-
-// import AddStudent from './components/addStudent';
-// import Students from './components/student2';
-
-//             // import myFunction from './components/1';
-//             // import app2 from './components/2';
-
-//             // import AddStudent from './components/AddStudent';
-//             // import StudentList from './components/StudentList'
-
-//             // import React from 'react';
-//             // import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-//             // import AddStudent from './components/AddStudent';
-//             // import StudentList from './components/StudentList';
-//             // import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//         {/* Hey This is Dineshika! */}
-//         <AppBar/>
-//         {/* <Student/>
-//         <Students/> */}
-
-//     </div>
-  
-//   );
-// }
-
-// export default App;
-
-
 import React, { useState } from 'react';
 import AppBar from './components/AppBar';
 import AddStudent from './components/addStudent';
@@ -77,3 +35,23 @@ function App() {
 
 export default App;
 
+
+
+
+// import React from 'react';
+// import Student from './components/Student';
+// import Student from './components/student1';
+// import Students from './components/student2';
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//         {/* Hey This is Dineshika! */}
+//         <AppBar/>
+//         {/* <Student/>
+//         <Students/> */}
+//     </div>
+//   );
+// }
+// export default App;
