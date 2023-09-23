@@ -22,12 +22,13 @@ export default function DeleteStudent({ studentId }) {
 
 return (
     <div>
-        <button id="nav-Btn" onClick={handleDeleteClick}>Delete Student</button>
+        <button id="nav-Btn" onClick={handleDeleteClick}>Delete</button>
     </div>
 );
 }
 
 //using get id and delete button
+
 // import React, { useState } from 'react';
 
 // export default function DeleteStudent({studentId}) {

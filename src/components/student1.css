@@ -10,7 +10,6 @@
 .paper {
     padding: 50px;
     width: inherit;  /* width: 600px; */
-    height: inherit;
     margin: 20px auto;
     background-color: #dcc4c4; /* background-color: #f4f4f4; */
     border-radius: 10px;
@@ -72,7 +71,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 #nav-Btn {
@@ -87,11 +86,40 @@
     transition: background-color 0.3s ease-in-out;
 }
 
-#nav-Btn:hover {
+#nav-Btn:hover, #btn, #save-btn{
     background-color: #d7d1d0;
 }
 
-.modal {
+#btn,#save-btn{
+    background-color: black;
+    color: #f16f6f;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+#btn {
+    margin: 20px 10px 20px 0;
+}
+
+#save-btn {
+    margin: 20px 10px 20px 7px; 
+    
+}
+
+#option-box,#input {
+    border-radius: 5px; 
+    border: 2px solid #f16f6f ; 
+    font-size: 25px;
+    margin-bottom: 5px;
+    height:auto;
+    background-color: #f16f6f;
+}
+
+
+/* .modal {
     display: block;
     position: fixed;
     z-index: 1;
@@ -118,4 +146,4 @@
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-}
+} */
