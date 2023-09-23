@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';   
 import './student1.css';
+import { navigateToStudentDetails } from './navigation';
 
-export default function Student() {
+export default function AddStudent() {
     const [name, setName] = useState('');
     const [stu_id, setStu_ID] = useState('');
     const [degree, setDegree] = useState('');
@@ -32,6 +33,7 @@ export default function Student() {
 
     return (
         <div className="container">
+            {/* <button id="nav-btn" onClick={() => navigateToStudentDetails()}>Go to Student Details</button>  */}
             <div className="paper">
                 <h1 className="title">Add Student</h1>
                 <form className="form" >    
@@ -63,9 +65,14 @@ export default function Student() {
                         value={year}
                         onChange={(e) => setYear(e.target.value)}
                     />
-                    <button className="button" type="submit" onClick={handleClick}>Submit</button>  
+                    <button className="button" type="submit" onClick={handleClick}>Submit</button>
+
+      {/* Add student form here */}
+      {/* <button onClick={() => navigateToStudentDetails()}>Go to Student Details</button> */}
                 </form>
-            </div>
+            </div> 
+            <button id="nav-Btn" onClick={() => navigateToStudentDetails()}>Student Details</button> 
         </div>
     );
+
 }

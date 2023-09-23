@@ -1,93 +1,79 @@
 
-import './App.css';
-// import React from 'react';-->new
-import React from 'react';
-
-// import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import AppBar from './components/AppBar';
-// import Student from './components/Student';
-import Student from './components/student1';
-// import myFunction from './components/1';
-// import app2 from './components/2';
-
-// import AddStudent from './components/AddStudent';
-// import StudentList from './components/StudentList'
-
-// import React from 'react';
-// import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-// import AddStudent from './components/AddStudent';
-// import StudentList from './components/StudentList';
 // import './App.css';
+//                 // import React from 'react';-->new
+// import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-        {/* Hey This is Dineshika! */}
-        <AppBar/>
-        <Student/>
-        {/* <myFunction/>
-        <app2/> */}
-    </div>
-    // <Router>
-    //   <div>
-    //     <nav>
-    //     <ul>
-    //       <li><Link to = "/add"> Add Student </Link> </li>
-    //       <li><Link to = "/students">Student Details List</Link></li>
-    //     </ul>
-    //     </nav>
+//         // import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+// import AppBar from './components/AppBar';
+//               // import Student from './components/Student';
+//               // import Student from './components/student1';
+//               // import Students from './components/student2';
 
-    //     <Switch>
-    //       <Route path="/add"><AddStudent /></Route>
-    //       <Route path="/students"><StudentList /></Route>
-    //     </Switch>
-    //     </div>
-    // </Router>
-  );
-}
+// import AddStudent from './components/addStudent';
+// import Students from './components/student2';
 
+//             // import myFunction from './components/1';
+//             // import app2 from './components/2';
 
-// import getContent from './components/2'; // Rename the import
+//             // import AddStudent from './components/AddStudent';
+//             // import StudentList from './components/StudentList'
+
+//             // import React from 'react';
+//             // import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+//             // import AddStudent from './components/AddStudent';
+//             // import StudentList from './components/StudentList';
+//             // import './App.css';
 
 // function App() {
-//   const [showContent, setShowContent] = useState(false); // State for content
-
-//   const myFunction = () => {
-//     // Perform any desired action
-//     setShowContent(true);
-//   };
-
 //   return (
 //     <div className="App">
-//       <AppBar />
-//       <Student />
-//       <button onClick={myFunction}>Replace document</button>
-//       {showContent && <p>{getContent()}</p>}
+//         {/* Hey This is Dineshika! */}
+//         <AppBar/>
+//         {/* <Student/>
+//         <Students/> */}
+
 //     </div>
-//   );
-// }   in same page hello
-
-// new page hello
-// function App() {
-//   const [showContent, setShowContent] = useState(false);
-
-//   const myFunction = () => {
-//     setShowContent(true);
-//   };
-
-//   return (
-//     <div className="App">
-//       <AppBar />
-//       <Student />
-//       <button onClick={myFunction}>Replace document</button>
-//       {showContent && (
-//         <div>
-//           <h1>Hello Page</h1>
-//           <p>{getContent()}</p>
-//         </div>
-//       )}
-//     </div>
+  
 //   );
 // }
 
+// export default App;
+
+
+import React, { useState } from 'react';
+import AppBar from './components/AppBar';
+import AddStudent from './components/addStudent';
+import StudentDetails from './components/studentDetails';
+import { initializeNavigationFunctions } from './components/navigation';
+
+function App() {
+  // State to track which component to render
+  const [showAddStudent, setShowAddStudent] = useState(true);
+
+  // Function to navigate to Student Details
+  const navigateToStudentDetails = () => {
+    setShowAddStudent(false);
+  };
+
+  // Function to navigate back to Add Student
+  const navigateToAddStudent = () => {
+    setShowAddStudent(true);
+  };
+
+  // Initialize navigation functions
+  initializeNavigationFunctions(navigateToStudentDetails, navigateToAddStudent);
+
+  return (
+    <div className="App">
+      <AppBar/>
+      {showAddStudent ? (
+        <AddStudent/>
+      ) : (
+        <StudentDetails />
+      )}
+    </div>
+  );
+}
+
 export default App;
+

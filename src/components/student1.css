@@ -10,6 +10,7 @@
 .paper {
     padding: 50px;
     width: inherit;  /* width: 600px; */
+    height: inherit;
     margin: 20px auto;
     background-color: #dcc4c4; /* background-color: #f4f4f4; */
     border-radius: 10px;
@@ -18,7 +19,7 @@
 
 .title {
     color: rgb(114, 7, 52);
-    font-size: 34px;
+    font-size: 40px;
     margin-bottom: 28px;
     text-align: center;
 }
@@ -71,6 +72,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    font-size: 20px;
+}
+
+#nav-Btn {
+    background-color: black;
+    color: #f16f6f;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#nav-Btn:hover {
+    background-color: #d7d1d0;
 }
 
 .modal {
