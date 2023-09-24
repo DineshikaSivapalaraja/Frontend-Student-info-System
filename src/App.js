@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import AppBar from './components/AppBar';
-import AddStudent from './components/addStudent';
-import StudentDetails from './components/studentDetails';
-import { initializeNavigationFunctions } from './components/navigation';
+import AppBar from './components/CRUD-OPERATION/AppBar';
+import AddStudent from './components/CRUD-OPERATION/addStudent';
+import StudentDetails from './components/CRUD-OPERATION/studentDetails';
+import { initializeNavigationFunctions } from './components/CRUD-OPERATION/navigation';
 
 function App() {
   // State to track which component to render
@@ -32,11 +32,7 @@ function App() {
     </div>
   );
 }
-
 export default App;
-
-
-
 
 // import React from 'react';
 // import Student from './components/Student';
